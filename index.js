@@ -2,12 +2,16 @@
 // Ses données sont dans le dossier du plugin, que NeoBase sauvegarde (synchro cloud et sauvegardes) ; à la première ouverture elle reprend ce que tu avais dans NeoBase.
 // Elle demande l'accès complet pour utiliser les outils d'interface de NeoBase. NeoBase ne l'ouvre que si elle est signée.
 const HTML = "";
+/*CSS-MOVED*/ const CSS = `.dcApp{overflow:hidden}
+.dcView{width:100%;height:100%;display:flex}
+`;  // le style de ce plugin (il utilise les variables du thème de NeoBase)
 export default async function (ctx) {
   const view = ctx.view;
   if (!ctx.host) { view.textContent = "Ce plugin doit être approuvé par NeoBase pour s'ouvrir."; return; }
   const { el, toast, sfx, ask, newTab, pixIcon, PIX, WX } = ctx.host;
   const host = ctx.host;
   const folder = ctx.folder, legacy = ctx.legacy || {};
+  ctx.host.addStyle(CSS);
   view.innerHTML = HTML;
   view.classList.add("dcApp");
   const $ = id => id === "discordApp" ? view : view.querySelector('#' + id);  // les identifiants de ta vue, sans toucher à ceux du reste de NeoBase

@@ -1,9 +1,0 @@
-{
-  "pluginId": "neobase.discord",
-  "repo": "NDesumeur/neobase-plugin-discord",
-  "version": "1.0.0",
-  "sha256": "3783be21f361d1bc415f7c93433ad780fd07fc1f26f80fc064c2f04b15882018",
-  "approvedAt": "2026-10-31T14:23:40.410Z",
-  "neobase": ">=4.0.0",
-  "signature": "Ug44UMftZorn1ivciF7ahINOAVrhzJWlLjtwdj8DiFJgdTdxGB96HXK8QGWZv5fCPVOrvX8Nf8zGfxj5boQiAw=="
-}
