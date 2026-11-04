@@ -1,8 +1,8 @@
 # Discord
 
-Discord dans NeoBase : l'application web officielle, ouverte dans la session de ton navigateur (tu te connectes une fois, comme sur n'importe quel site). Les messages non lus s'affichent sur l'onglet, et les couleurs de Discord suivent le thème de NeoBase (réglage dans Paramètres).
+Discord dans NeoBase : l'application web officielle, aux couleurs de ton thème, avec les messages non lus sur l'onglet.
 
-NeoBase ne lit jamais rien de ton compte.
+Ses données sont rangées dans le dossier du plugin, que NeoBase sauvegarde (synchro cloud comprise). Au premier lancement, il reprend ce que tu avais déjà dans NeoBase.
 
 ## Installer
 
