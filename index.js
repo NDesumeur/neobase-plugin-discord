@@ -1,27 +1,27 @@
 // Discord : ton appli d'origine (HTML et code inchangés), livrée en plugin.
-// Ses données sont dans le dossier du plugin, que NeoBase sauvegarde (synchro cloud et sauvegardes) ; à la première ouverture elle reprend ce que tu avais dans NeoBase.
-// Elle demande l'accès complet pour utiliser les outils d'interface de NeoBase. NeoBase ne l'ouvre que si elle est signée.
+// Ses données sont dans le dossier du plugin, que NeoDex sauvegarde (synchro cloud et sauvegardes) ; à la première ouverture elle reprend ce que tu avais dans NeoDex.
+// Elle demande l'accès complet pour utiliser les outils d'interface de NeoDex. NeoDex ne l'ouvre que si elle est signée.
 const HTML = "";
 /*CSS-MOVED*/ const CSS = `.dcApp{overflow:hidden}
 .dcView{width:100%;height:100%;display:flex}
-`;  // le style de ce plugin (il utilise les variables du thème de NeoBase)
+`;  // le style de ce plugin (il utilise les variables du thème de NeoDex)
 export default async function (ctx) {
   const view = ctx.view;
-  if (!ctx.host) { view.textContent = "Ce plugin doit être approuvé par NeoBase pour s'ouvrir."; return; }
+  if (!ctx.host) { view.textContent = "Ce plugin doit être approuvé par NeoDex pour s'ouvrir."; return; }
   const { el, toast, sfx, ask, newTab, pixIcon, PIX, WX } = ctx.host;
   const host = ctx.host;
   const folder = ctx.folder, legacy = ctx.legacy || {};
   ctx.host.addStyle(CSS);
   view.innerHTML = HTML;
   view.classList.add("dcApp");
-  const $ = id => id === "discordApp" ? view : view.querySelector('#' + id);  // les identifiants de ta vue, sans toucher à ceux du reste de NeoBase
+  const $ = id => id === "discordApp" ? view : view.querySelector('#' + id);  // les identifiants de ta vue, sans toucher à ceux du reste de NeoDex
   const doc = async n => { try { return await folder.read(n); } catch { return null; } };
   const ymd = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
   // ---- ton code d'origine ----
-  /* ---------- Discord, as an app of NeoBase: the real Discord web app (discord.com/app) inside the app's view, in the session of the
-     browser (you log in there once, like on any site; NeoBase never reads anything of the account). Unread messages show in the tab's
-     title; Discord's colours can be NeoBase's (Paramètres, like Gmail: main.js injects the style). Its notifications go through the
+  /* ---------- Discord, as an app of NeoDex: the real Discord web app (discord.com/app) inside the app's view, in the session of the
+     browser (you log in there once, like on any site; NeoDex never reads anything of the account). Unread messages show in the tab's
+     title; Discord's colours can be NeoDex's (Paramètres, like Gmail: main.js injects the style). Its notifications go through the
      permissions of sites (the bar asks once). ---------- */
   let dcView = null;
   function dcOpen() {

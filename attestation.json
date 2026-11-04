@@ -1,6 +1,6 @@
 {
-  "pluginId": "neobase.discord",
-  "repo": "NDesumeur/neobase-plugin-discord",
+  "pluginId": "neodex.discord",
+  "repo": "NDesumeur/neodex-plugin-discord",
   "version": "1.0.1",
   "sha256": "695ba07fe5c4c7e611cfeebeb0b4a934b67561a08e075abc91e85f4353859769",
   "approvedAt": "2026-10-31T17:51:20.950Z",

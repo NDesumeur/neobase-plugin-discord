@@ -1,9 +1,9 @@
 {
-  "id": "neobase.discord",
+  "id": "neodex.discord",
   "name": "Discord",
   "version": "1.0.1",
   "author": "NDesumeur",
-  "description": "Discord dans NeoBase : l'application web officielle, aux couleurs de ton thème, avec les messages non lus sur l'onglet.",
+  "description": "Discord dans NeoDex : l'application web officielle, aux couleurs de ton thème, avec les messages non lus sur l'onglet.",
   "icon": "icon.png",
   "entry": "index.js",
   "view": "discord",
