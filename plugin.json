@@ -10,6 +10,8 @@
   "neobase": ">=4.0.0",
   "type": "app",
   "category": "Communication",
+  "syncMode": "aucune",
+  "syncInfo": "Rien n'est synchronisé : la connexion reste sur chaque PC.",
   "mobile": false,
   "system": false,
   "dependencies": {},
